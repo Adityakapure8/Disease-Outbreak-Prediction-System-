@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Prediction Dashboard | MULTIPLE DISEASES OUTBREAK PREDICTION SYSTEM</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <i class="fas fa-heartbeat"></i>
+            <span>HealthPredict</span>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="#diabetes-section"><i class="fas fa-syringe"></i> Diabetes</a></li>
+            <li><a href="#heart-section"><i class="fas fa-heart"></i> Heart</a></li>
+            <li><a href="#parkinsons-section"><i class="fas fa-brain"></i> Parkinson's</a></li>
+            <li><a href="#contact-section"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+        <div class="sidebar-footer">
+            <p>© 2025 adityakapure</p>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-bars sidebar-toggle"></i>
+                <i class="fas fa-heartbeat"></i>
+                <span>HealthPredict</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#diabetes-section"><i class="fas fa-syringe"></i> Diabetes</a></li>
+                <li><a href="#heart-section"><i class="fas fa-heart"></i> Heart</a></li>
+                <li><a href="#parkinsons-section"><i class="fas fa-brain"></i> Parkinson's</a></li>
+                <li><a href="#contact-section"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <div class="container">
+            <h1>MULTIPLE DISEASES OUTBREAK PREDICTION SYSTEM</h1>
+             <div class="form-section" id="diabetes-section">
+            <h2>Diabetes Prediction</h2>
+             <input type="number" id="diabetesPregnancies" placeholder="Pregnancies">
+            <input type="number" id="diabetesGlucose" placeholder="Glucose">
+            <input type="number" id="diabetesBloodPressure" placeholder="Blood Pressure">
+            <input type="number" id="diabetesSkinThickness" placeholder="Skin Thickness">
+            <input type="number" id="diabetesInsulin" placeholder="Insulin">
+            <input type="number" id="diabetesBMI" placeholder="BMI">
+            <input type="number" id="diabetesDiabetesPedigree" placeholder="Diabetes Pedigree Function">
+            <input type="number" id="diabetesAge" placeholder="Age">
+            <button onclick="predictDiabetes()">Predict Diabetes</button>
+            <p id="diabetesResult"></p>
+        </div>
+
+        <div class="form-section" id="heart-section">
+            <h3>Heart Disease Prediction</h3>
+            <input type="number" id="heartAge" placeholder="Age">
+            <input type="number" id="heartSex" placeholder="Sex (0/1)">
+            <input type="number" id="heartCP" placeholder="Chest Pain Type">
+            <input type="number" id="heartTrestbps" placeholder="Resting Blood Pressure">
+            <input type="number" id="heartChol" placeholder="Cholesterol">
+            <input type="number" id="heartFbs" placeholder="Fasting Blood Sugar (0/1)">
+            <input type="number" id="heartRestecg" placeholder="Resting Electrocardiographic Results">
+            <input type="number" id="heartThalach" placeholder="Maximum Heart Rate Achieved">
+            <input type="number" id="heartExang" placeholder="Exercise Induced Angina (0/1)">
+            <input type="number" id="heartOldpeak" placeholder="Oldpeak">
+            <input type="number" id="heartSlope" placeholder="Slope of Peak Exercise ST Segment">
+            <input type="number" id="heartCa" placeholder="Number of Major Vessels (0-3)">
+            <input type="number" id="heartThal" placeholder="Thalassemia (1-3)">
+            <button onclick="predictDiabetes()">Predict Diabetes</button>
+            <p id="diabetesResult"></p>
+        </div>
+
+        <div class="form-section" id="parkinsons-section">
+            <h4>Parkinson's Disease Detection</h4>
+            <input type="number" id="parkinsonsMDVPFo" placeholder="MDVP:Fo(Hz)">
+            <input type="number" id="parkinsonsMDVPFhi" placeholder="MDVP:Fhi(Hz)">
+            <input type="number" id="parkinsonsMDVPFlo" placeholder="MDVP:Flo(Hz)">
+            <input type="number" id="parkinsonsMDVPJitter" placeholder="MDVP:Jitter(%)">
+            <input type="number" id="parkinsonsMDVPJitterAbs" placeholder="MDVP:Jitter(Abs)">
+            <input type="number" id="parkinsonsMDVPRAP" placeholder="MDVP:RAP">
+            <input type="number" id="parkinsonsMDVPPPQ" placeholder="MDVP:PPQ">
+            <input type="number" id="parkinsonsJitterDDP" placeholder="Jitter:DDP">
+            <input type="number" id="parkinsonsMDVPShimmer" placeholder="MDVP:Shimmer">
+            <input type="number" id="parkinsonsMDVPShimmerDB" placeholder="MDVP:Shimmer(dB)">
+            <input type="number" id="parkinsonsShimmerAPQ3" placeholder="Shimmer:APQ3">
+            <input type="number" id="parkinsonsShimmerAPQ5" placeholder="Shimmer:APQ5">
+            <input type="number" id="parkinsonsMDVPAPQ" placeholder="MDVP:APQ">
+            <input type="number" id="parkinsonsShimmerDDA" placeholder="Shimmer:DDA">
+            <input type="number" id="parkinsonsNHR" placeholder="NHR">
+            <input type="number" id="parkinsonsHNR" placeholder="HNR">
+            <input type="number" id="parkinsonsRPDE" placeholder="RPDE">
+            <input type="number" id="parkinsonsDFA" placeholder="DFA">
+            <input type="number" id="parkinsonsSpread1" placeholder="spread1">
+            <input type="number" id="parkinsonsSpread2" placeholder="spread2">
+            <input type="number" id="parkinsonsD2" placeholder="D2">
+            <input type="number" id="parkinsonsPPE" placeholder="PPE">
+            <button onclick="predictParkinsons()">Predict Parkinson's Disease</button>
+        </div>
+    </div>
+            
+
+            
+            <div class="form-section" id="contact-section">
+    <h2><i class="fas fa-paper-plane"></i> Get In Touch</h2>
+    <form id="contactForm" class="compact-form">
+        <div class="form-row">
+            <div class="form-group">
+                <input type="text" id="contactName" placeholder=" " required>
+                <label for="contactName">Your Name</label>
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="form-group">
+                <input type="email" id="contactEmail" placeholder=" " required>
+                <label for="contactEmail">Email Address</label>
+                <i class="fas fa-envelope"></i>
+            </div>
+        </div>
+        <div class="form-group">
+            <textarea id="contactMessage" placeholder=" " rows="3" required></textarea>
+            <label for="contactMessage">Your Message</label>
+            <i class="fas fa-comment"></i>
+        </div>
+        <button type="submit" class="send-btn">
+            <i class="fas fa-paper-plane"></i> Send Message
+        </button>
+        <div id="contactResult" class="result-message"></div>
+    </form>
+</div>
+        </div>
+    </div> 
+    <script src="/static/script.js"></script>
+</body>
+</html>
